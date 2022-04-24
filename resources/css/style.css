@@ -27,8 +27,9 @@ html {
 
 .body {
     display: grid;
-    grid-template: 4.5rem auto 3.5rem / 20% 60% 20%);
+    grid-template: auto auto 3.5rem / 20% 60% 20%);
     width: 100%;
+    min-width: 18.75rem;
     gap: 2rem 1rem;
     grid-template-areas: 'header header header'
                          'main main main'
@@ -40,13 +41,6 @@ img {
     max-width: 100%;
 }
 
-/*
-@media only screen and (max-width: 895px) {
-    .main-content {
-      top: 2.5625rem;
-    }
-} 
-*/
 /* Header */
 
 header {
@@ -55,6 +49,7 @@ header {
     z-index: 100;
 
     width: 100%;
+    min-width: 18.75rem;
     grid-area: header;
     display: grid;
     grid-template: 4.5rem / 1fr 2fr 1fr;
@@ -98,13 +93,64 @@ nav a {
     color: #172B4D;
 }
 
+@media only screen and (max-width: 700px) {
+    header {
+        grid-template: 4rem 2.5rem / 1fr;
+        gap: 0 1rem;
+        grid-template-areas: 'logo'
+                             'nav';
+        align-items: center;
+        justify-items: center;
+    }
+
+    header .logo {
+        padding: .5rem 0 0 0;
+        justify-self: center;
+    }
+
+    nav {
+        padding: 0 2rem;
+    }
+
+    nav li {
+        padding: 0 2rem .5rem 2rem; 
+        list-style: none;
+} 
+
+@media only screen and (max-width: 425px) {
+    header {
+        grid-template: 4rem 2.5rem / 1fr;
+        gap: 0 1rem;
+        grid-template-areas: 'logo'
+                             'nav';
+        align-items: center;
+        justify-items: center;
+    }
+
+    header .logo {
+        padding: .5rem 0 0 0;
+        justify-self: center;
+    }
+
+    nav {
+        padding: 0 1rem;
+    }
+
+    nav li {
+        padding: 0 1rem .5rem 1rem; 
+        list-style: none;
+} 
+
+
 /* Main */
 
 main {
     grid-area: main;
+    min-width: 18.75rem;
 }
 
 /* Footer */
-main {
+footer {
     grid-area: footer;
+    min-width: 18.75rem;
 }
