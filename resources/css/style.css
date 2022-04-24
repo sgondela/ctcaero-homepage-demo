@@ -1,0 +1,46 @@
+/* Load fonts */
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/IBMPlexSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/IBMPlexSans-Regular.ttf') format('truetype');
+}
+
+/* Universal Styles */
+
+html {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+}
+
+.main-content {
+    position: relative;
+    top: 4.5rem; /* To offset for fixed header. 5.125rem before*/
+}
+/*
+.center {
+    text-align: center;
+}
+
+.image-container {
+    overflow: hidden;
+}
+  
+.image-container img {
+    display: block;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 895px) {
+    .main-content {
+      top: 2.5625rem;
+    }
+} */
